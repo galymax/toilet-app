@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Header</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Producs</a>
+                    </li>
+                    <li>
+                        <a href="">Prices</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Main</h2>
+
+            <form action="https://kloapp.herokuapp.com/add" method="POST">
+                <!-- Text field single line -->
+                <div>
+                    <label for="firstname">Firstname</label>
+                    <input name="name" type="text" id="firstname">
+                </div>
+
+                <!-- Text field single line -->
+                <div>
+                    <label for="city">City</label>
+                    <input name="city" minlength="3" required type="text" id="city">
+                </div>
+                
+
+                <!-- Checkbox -->
+                <div>
+                    <label for="webdev">Mirror</label>
+                    <input id="webdev" name="feat-mirror" type="checkbox" value="true">
+                </div>
+                
+
+                <!-- password -->
+                <input type="password" name="password">
+
+                <!-- Dropdown menu -->
+                <label for="citysel">City</label>
+                <input type="text" required list="cities" name="city" id="citysel">
+                <datalist id="cities" required>
+                    <option value="New York">
+                    <option value="Cologne">
+                    <option value="Paris">
+                </datalist>
+
+                <!-- Multiline text input -->
+                <textarea name="cv"></textarea>
+
+                <!-- One of several options -->
+                <input type="radio" name="seats" required value="1">
+                <input type="radio" name="seats" value="2">
+                <input type="radio" name="seats" value="3">
+
+                <!-- Number input -->
+                <input type="number" name="rating" min="1" max="5" required>
+
+                <!-- Submit button -->
+                <input type="submit" value="Create">
+            </form>
+
+        </main>
+        <footer>
+            <h2>Footer</h2>
+            <p>Infos</p>
+        </footer>
+    </div>
+</body>
+</html>
